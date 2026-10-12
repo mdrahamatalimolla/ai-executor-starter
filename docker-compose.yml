@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  executor:
+    build: .
+    image: mdrahamatalimolla/si-executor:latest
+    container_name: si_executor
+    environment:
+      - API_KEY=REPLACE_WITH_STRONG_KEY
+      - PORT=5000
+    ports:
+      - "127.0.0.1:5000:5000"
+    volumes:
+      - ./whitelist.json:/opt/executor/whitelist.json:ro
+      - ./scripts:/opt/executor/scripts:ro
+      - ./proposals.db:/opt/executor/proposals.db
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '1.5'
+          memory: 2048M

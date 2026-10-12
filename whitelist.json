@@ -1,0 +1,14 @@
+{
+  "backup": {
+    "path": "/opt/executor/scripts/run_backup.sh",
+    "description": "Run backup script (no extra args recommended)"
+  },
+  "cleanup_tmp": {
+    "path": "/opt/executor/scripts/cleanup_tmp.sh",
+    "description": "Clean temporary files (allows optional directory arg)"
+  },
+  "list_shared": {
+    "path": "/bin/ls",
+    "description": "List files in shared dir (args: -la /path)"
+  }
+}
