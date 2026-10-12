@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Si AI agent — Approval UI</title>
+  <style>
+    body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:20px}
+    h1{font-size:1.4rem}
+    #controls{margin-bottom:12px}
+    table{border-collapse:collapse;width:100%}
+    th,td{border:1px solid #ddd;padding:8px;text-align:left}
+    th{background:#f4f4f4}
+    button{padding:6px 10px;margin-right:6px}
+    .status-pending{color:orange}
+    .status-done{color:green}
+    .status-failed{color:red}
+  </style>
+</head>
+<body>
+  <h1>Si AI agent — Approval UI</h1>
+  <div id="controls">
+    <label>API Key: <input id="apiKey" type="password" placeholder="Enter API key"></label>
+    <button id="refresh">Refresh</button>
+  </div>
+  <div id="list"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>

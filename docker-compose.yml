@@ -19,3 +19,11 @@ services:
         limits:
           cpus: '1.5'
           memory: 2048M
+  ui:
+    image: nginx:alpine
+    container_name: si_approval_ui
+    ports:
+      - "127.0.0.1:8000:80"
+    volumes:
+      - ./ui:/usr/share/nginx/html:ro
+    restart: unless-stopped
